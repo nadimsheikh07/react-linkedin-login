@@ -26,13 +26,13 @@ class Index extends React.Component {
   render() {
     const { code, errorMessage } = this.state;
     return (
-      <React.Fragment>
+      <React.Fragment>        
         <LinkedIn
           clientId="86qrkhmupyp1tv"
           state="V%23JKVH@KJV@"
           scope="r_liteprofile r_emailaddress"
-          onFailure={(data) => this.handleFailure(data)}
-          onSuccess={(error) => this.handleSuccess(error)}
+          onFailure={this.handleFailure}
+          onSuccess={this.handleSuccess}
           redirectUri="http://localhost:3000/linkedin"
         >
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRzTU00PbM-0Lni0ylwR29YRkAC3ukV20iTGg&usqp=CAU" alt="Log in with Linked In" style={{ maxWidth: '180px' }} />
