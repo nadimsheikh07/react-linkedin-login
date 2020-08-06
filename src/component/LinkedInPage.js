@@ -26,11 +26,11 @@ class Index extends React.Component {
   render() {
     const { code, errorMessage } = this.state;
     return (
-      <React.Fragment>        
+      <React.Fragment>
         <LinkedIn
           clientId="86qrkhmupyp1tv"
-          state="V%23JKVH@KJV@"
-          scope="r_liteprofile r_emailaddress"
+          state="987654321"
+          scope={['r_liteprofile', 'r_emailaddress']}
           onFailure={this.handleFailure}
           onSuccess={this.handleSuccess}
           redirectUri="http://localhost:3000/linkedin"
